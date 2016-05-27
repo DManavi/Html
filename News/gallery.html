@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>gallery</title>
+    <meta name="viewport" content="user-scalable=no width=device-width initial-scale=1 maximum-scale=1">
+    <link href="./bower_components/mdi/css/materialdesignicons.css" rel="stylesheet">
+    <link href="./css/custom.css" rel="stylesheet">
+</head>
+<body>
+<div class="nav-bar">
+    <input type="text" dir="rtl" placeholder="جستجو ....">
+    <button type="button" class="search"><i class="mdi mdi-magnify"></i> </button>
+    <img src="./img/download.png" class="logo">
+    <a href="./index.html"><button type="button">خانه</button></a>
+    <a href="./gallery.html"><button type="button">گالری</button></a>
+</div>
+<div class="big-img main">
+    <img class="gallery-img" src="./img/346fc4914bdd7724a80dcb89b3f5a715_760_348.jpg">
+</div>
+<img class="img-select" src="./img/346fc4914bdd7724a80dcb89b3f5a715_760_348.jpg">
+<img class="img-select" src="./img/4b001e6c60bade341109d3120537549b_760_348.jpg">
+<img class="img-select" src="./img/d159c0714c13c1c62be8cec1e22dffc4_760_348.jpg">
+<img class="img-select" src="./img/346fc4914bdd7724a80dcb89b3f5a715_760_348.jpg">
+</body>
+</html>
+
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("img.img-select").click(function(e){
+
+            // get src attribute
+            var src = e.target.src;
+
+            $("img.gallery-img").attr('src', src);
+        });
+    });
+</script>
